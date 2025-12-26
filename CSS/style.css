@@ -1,0 +1,393 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: #313131;
+
+  width: 100%;
+}
+
+body h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.divider {
+  width: 300px;
+  height: 10px;
+  background-color: #4379f2;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+/*--------------------------------------------------------------
+    # Header
+    --------------------------------------------------------------*/
+#header {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0 2px 15px rgba(39, 39, 39, 0.233);
+}
+
+#header .logo img {
+  margin: 5px;
+  max-height: 50px;
+}
+
+/*--------------------------------------------------------------
+    # Hero
+--------------------------------------------------------------*/
+#hero {
+  padding-top: 50px;
+}
+
+#hero .content-hero {
+  color: white;
+  min-height: 50vh;
+  background-image: url(../Assets/img/Header.png);
+  background-color: black;
+  background-size: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.74);
+  background-position: center;
+  border-radius: 30px;
+  transform: scale(1);
+  transition: 0.4s ease;
+}
+
+#hero .content-hero:hover::before {
+  content: '';
+  position: absolute;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#hero .content-hero h1 {
+  background-color: #ffd800;
+  width: fit-content;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+#hero .content-hero:hover {
+  transform: scale(1.02);
+}
+
+#hero .content-hero p {
+  text-align: justify;
+}
+
+/*--------------------------------------------------------------
+    # Hukum
+--------------------------------------------------------------*/
+
+#hukum {
+  background-color: rgb(241, 241, 241);
+}
+
+#hukum h1 {
+  font-weight: bold;
+  max-width: max-content;
+  text-align: center;
+}
+
+#hukum .materi-hukum {
+  height: max-content;
+}
+
+#hukum .materi-hukum .cardy {
+  background-color: transparent;
+  height: 300px;
+  position: relative; /* Agar pseudo-elemen diatur relatif terhadap card */
+  overflow: hidden; /* Supaya pseudo-elemen tidak keluar dari card */
+}
+
+#hukum .materi-hukum .card-content {
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  height: fit-content;
+  width: max;
+  transform: scale(1);
+  position: relative; /* Agar konten berada di atas pseudo-elemen */
+  z-index: 2; /* Konten harus berada di atas overlay */
+
+  transition: transform 0.2s ease;
+}
+
+#hukum .materi-hukum .img-1::before {
+  content: '';
+  /* mix-blend-mode: multiply; */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 59, 240, 0.863); /* Overlay dengan transparansi */
+  z-index: 1; /* Pseudo-elemen di belakang konten, tetapi di atas background */
+}
+#hukum .materi-hukum .img-2::before {
+  content: '';
+  /* mix-blend-mode: multiply; */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 59, 59, 0.863); /* Overlay dengan transparansi */
+  z-index: 1; /* Pseudo-elemen di belakang konten, tetapi di atas background */
+}
+#hukum .materi-hukum .img-3::before {
+  content: '';
+  /* mix-blend-mode: multiply; */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(129, 114, 24, 0.863); /* Overlay dengan transparansi */
+  z-index: 1; /* Pseudo-elemen di belakang konten, tetapi di atas background */
+}
+#hukum .materi-hukum .img-4::before {
+  content: '';
+  /* mix-blend-mode: multiply; */
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 170, 85, 0.863); /* Overlay dengan transparansi */
+  z-index: 1; /* Pseudo-elemen di belakang konten, tetapi di atas background */
+}
+
+#hukum .materi-hukum .img-1 {
+  background-image: url(../Assets/img/hukum/img-1-plan.png);
+  background-size: cover;
+  background-position: center;
+}
+#hukum .materi-hukum .img-2 {
+  background-image: url(../Assets/img/hukum/img-2-plan.png);
+  background-size: cover;
+  background-position: center;
+}
+#hukum .materi-hukum .img-3 {
+  background-image: url(../Assets/img/hukum/img-3-plan.png);
+  background-size: cover;
+  background-position: center;
+}
+#hukum .materi-hukum .img-4 {
+  background-image: url(../Assets/img/hukum/img-4-plan.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#hukum .materi-hukum .cardy:hover .card-content {
+  transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------
+    # jenis-hukum
+--------------------------------------------------------------*/
+
+#jenis-hukum .image img {
+  background-color: #4379f2;
+  border-radius: 1000px;
+  box-shadow: 10px 5px 0 #ffd800;
+}
+
+#jenis-hukum .content .judul {
+  font-weight: bold;
+}
+
+#jenis-hukum .content .list {
+  font-weight: 200;
+  transition: 0.5s ease;
+}
+#jenis-hukum .content .list:hover {
+  transform: scale(1.05) translate(20px, 2px);
+}
+
+#jenis-hukum .content .list span {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+    # Dos & Donts
+--------------------------------------------------------------*/
+#dos-donts {
+  padding: 50px 0;
+  background-image: url(../Assets/img/Header.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#dos-donts .judul {
+  stroke: salmon;
+  color: white;
+  text-align: center;
+}
+
+#dos-donts .judul h1 {
+  font-weight: bold;
+}
+#dos-donts .judul p {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#dos-donts .dos-donts-list h3 {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.644);
+}
+
+#dos-donts .dos-donts-list .dos .dos-content {
+  background-color: #146ec856;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.377);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.356);
+  transition: 0.5s ease;
+}
+#dos-donts .dos-donts-list .dos .dos-content:hover {
+  transform: scale(1.1) translate(-20px);
+}
+
+#dos-donts .dos-donts-list .donts .donts-content {
+  background-color: #ffd9003f;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.377);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.356);
+  transition: 0.5s ease;
+}
+#dos-donts .dos-donts-list .donts .donts-content:hover {
+  transform: scale(1.1) translate(20px);
+}
+
+#dos-donts .dos-donts-list li {
+  margin: 10px 0;
+  color: white;
+  /* height: 70px; */
+}
+
+/*--------------------------------------------------------------
+    # pelanggaran
+--------------------------------------------------------------*/
+#pelanggaran .judul {
+  text-align: center;
+}
+
+#pelanggaran .judul h1 {
+  font-weight: bold;
+}
+
+#pelanggaran .card {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.158);
+  transition: 0.3s;
+}
+
+#pelanggaran .card img {
+  border: 10px;
+  box-shadow: inset 0px 0px 14px rgba(0, 0, 0, 0.158);
+}
+
+#pelanggaran .card:hover {
+  transform: scale(1.05);
+}
+
+#pelanggaran .card-body {
+  padding: 30px;
+  text-align: justify;
+}
+
+#pelanggaran .card-body span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+    # pencegahan
+--------------------------------------------------------------*/
+
+#pencegahan {
+  background-image: url(../Assets/img/pelanggaran-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Agar pseudo-elemen diatur relatif terhadap card */
+  overflow: hidden; /* Supaya pseudo-elemen tidak keluar dari card */
+}
+#pencegahan::before {
+  content: '';
+  mix-blend-mode: multiply;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 93, 173, 0.925); /* Overlay dengan transparansi */
+  z-index: 1; /* Pseudo-elemen di belakang konten, tetapi di atas background */
+}
+
+#pencegahan .pencegahan-content {
+  position: relative; /* Agar konten berada di atas pseudo-elemen */
+  z-index: 2; /* Konten harus berada di atas overlay */
+}
+
+#pencegahan .pencegahan-content .judul {
+  color: white;
+}
+
+#pencegahan .pencegahan-content .judul h1 {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+#pencegahan .pencegahan-content .right .list {
+  text-align: justify;
+  color: white;
+  background-color: #146ec856;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.377);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.356);
+  transition: 0.5s ease;
+}
+#pencegahan .pencegahan-content .right .list span {
+  font-weight: bold;
+}
+
+#pencegahan .pencegahan-content .right .list:hover {
+  transform: scale(1.1) translate(20px);
+}
+
+footer {
+  box-shadow: 0px -2px 26px rgba(0, 0, 0, 0.356);
+}
+
+footer a {
+  text-decoration: none;
+  color: #313131;
+  font-weight: bold;
+}
+
+footer .content {
+  width: max-content;
+}
